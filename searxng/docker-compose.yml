@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   searxng:
     image: searxng/searxng:latest
@@ -8,6 +6,11 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./searxng-data:/etc/searxng
+      - searxng-data:/etc/searxng
+      - ./settings.yml:/etc/searxng/settings.yml
     environment:
       - SEARXNG_BASE_URL=http://localhost:8080/
+      - SEARXNG_SECRET=${SEARXNG_SECRET}
+
+volumes:
+  searxng-data:
