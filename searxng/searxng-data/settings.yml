@@ -80,7 +80,16 @@ search:
     # ReCAPTCHA
     recaptcha_SearxEngineCaptcha: 604800
 
-  #
+  # remove format to deny access, use lower case.
+  # formats: [html, csv, json, rss]
+  formats:
+    - html
+    - json
+
+server:
+  # Is overwritten by ${SEARXNG_PORT} and ${SEARXNG_BIND_ADDRESS}
+  port: 8888
+  bind_address: "127.0.0.1"
   # public URL of the instance, to ensure correct inbound links. Is overwritten
   # by ${SEARXNG_BASE_URL}.
   base_url: false  # "http://example.com/location"
@@ -94,7 +103,7 @@ search:
   # If your instance owns a /etc/searxng/settings.yml file, then set the following
   # values there.
 
-  secret_key: "b7ras8m448cerJyGqRv6pzeursXW86"  # Is overwritten by ${SEARXNG_SECRET}
+  secret_key: "4GGPwOLQ60TZKfDkiq1BdAx5OoFYDl5"  # Is overwritten by ${SEARXNG_SECRET}
   # Proxy image results through SearXNG. Is overwritten by ${SEARXNG_IMAGE_PROXY}
   image_proxy: false
   # 1.0 and 1.1 are supported
