@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "searxng": {
+      "command": "mcp-searxng",
+      "env": {
+        "SEARXNG_URL": "http://localhost:8080"
+      }
+    },
+    "angular-cli": {
+      "command": "npx",
+      "args": ["-y", "@angular/cli", "mcp"]
+    }
+  }
+}
